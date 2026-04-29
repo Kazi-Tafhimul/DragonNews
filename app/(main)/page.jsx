@@ -1,4 +1,5 @@
 import LeftSideBar from "@/components/shared/homepage/news/LeftSideBar";
+import RightSidebar from "@/components/shared/homepage/news/RightSidebar";
 import Image from "next/image";
 async function getCategories() {
     const res = await fetch('https://openapi.programming-hero.com/api/news/categories');
@@ -15,8 +16,8 @@ export default async function Home(){
         <div className="font-bold text-3xl col-span-6">
             All News
         </div>
-        <div className="font-bold text-3xl col-span-3">
-            Social icons
+        <div className="col-span-3">
+            <RightSidebar></RightSidebar>
         </div>
     </div>
 }
